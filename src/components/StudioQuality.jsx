@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 function StudioQuality() {
   return (
     <section className="bg-gray-50 py-24 px-5 text-center">
@@ -21,5 +19,5 @@ function StudioQuality() {
   )
 }
 
-export default memo(StudioQuality)
+export default StudioQuality
 

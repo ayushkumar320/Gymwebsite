@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react'
+import { useMemo } from 'react'
 
 function AsSeenIn() {
   // Memoize brand logos array to prevent recreation
@@ -18,5 +18,5 @@ function AsSeenIn() {
   )
 }
 
-export default memo(AsSeenIn)
+export default AsSeenIn
 

@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react'
+import { useMemo } from 'react'
 
 // Static data moved outside component
 const MENU_LINKS = [
@@ -127,5 +127,5 @@ function Footer() {
   )
 }
 
-export default memo(Footer)
+export default Footer
 

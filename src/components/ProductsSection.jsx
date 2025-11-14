@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import ProductCard from './ProductCard'
 
 function ProductsSection({ products }) {
@@ -13,5 +12,5 @@ function ProductsSection({ products }) {
   )
 }
 
-export default memo(ProductsSection)
+export default ProductsSection
 

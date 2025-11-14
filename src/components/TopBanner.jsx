@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react'
+import { useMemo } from 'react'
 
 // Static banner items - moved outside component
 const BANNER_ITEMS = [
@@ -27,5 +27,5 @@ function TopBanner() {
   )
 }
 
-export default memo(TopBanner)
+export default TopBanner
 

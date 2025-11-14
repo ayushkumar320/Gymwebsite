@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 function ProductCard({ product }) {
   return (
     <div className="text-center transition-transform hover:-translate-y-1">
@@ -20,5 +18,5 @@ function ProductCard({ product }) {
   )
 }
 
-export default memo(ProductCard)
+export default ProductCard
 

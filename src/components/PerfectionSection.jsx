@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react'
+import { useMemo } from 'react'
 import { products } from '../data/products'
 
 function PerfectionSection() {
@@ -29,5 +29,5 @@ function PerfectionSection() {
   )
 }
 
-export default memo(PerfectionSection)
+export default PerfectionSection
 
