@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import videoBg from '../assets/WhatsApp Video 2025-11-13 at 11.00.30.mp4'
 
 function Hero() {
@@ -21,17 +20,17 @@ function Hero() {
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto px-5 text-center mt-[102px]">
         <h1 className="text-6xl md:text-5xl sm:text-4xl font-bold leading-tight mb-5 text-white">
-          BLACK FRIDAY SALE
+          UNLIMITED ACCESS TO THE GYM
         </h1>
         <p className="text-3xl md:text-2xl mb-8 text-white">
-          UP TO 50% OFF
+          SUNDAY OPEN
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="bg-transparent text-white border-2 border-white py-4 px-10 text-base font-semibold cursor-pointer transition-all uppercase tracking-wider hover:bg-white hover:text-gray-900">
-            AT-HOME REFORMERS
+            GET YOUR MEMBERSHIP
           </button>
           <button className="bg-transparent text-white border-2 border-white py-4 px-10 text-base font-semibold cursor-pointer transition-all uppercase tracking-wider hover:bg-white hover:text-gray-900">
-            STUDIO REFORMERS
+            GET YOUR MEMBERSHIP
           </button>
         </div>
       </div>
@@ -39,5 +38,5 @@ function Hero() {
   )
 }
 
-export default memo(Hero)
+export default Hero
 
