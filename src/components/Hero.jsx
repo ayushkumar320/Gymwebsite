@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
-import videoBg from "../assets/WhatsApp Video 2025-11-13 at 11.00.30.mp4";
+import { useEffect, useState } from "react"
+import videoBg from "../assets/WhatsApp Video 2025-11-13 at 11.00.30.mp4"
 
-function Hero({allowReveal}) {
+function Hero({ allowReveal }) {
   const [isVideoReady, setIsVideoReady] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [showContent, setShowContent] = useState(false);
@@ -50,12 +50,10 @@ function Hero({allowReveal}) {
         </h1>
         <p className="text-3xl md:text-2xl mb-8 text-white">SUNDAY OPEN</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-transparent text-white border-2 border-white py-4 px-10 text-base font-semibold cursor-pointer transition-all uppercase tracking-wider hover:bg-white hover:text-gray-900">
-            GET YOUR MEMBERSHIP
+          <button className="hero-button relative bg-transparent text-white border-2 border-white py-4 px-10 text-base font-semibold cursor-pointer uppercase tracking-wider overflow-hidden group">
+            <span className="relative z-10">CONNECT WITH US</span>
           </button>
-          <button className="bg-transparent text-white border-2 border-white py-4 px-10 text-base font-semibold cursor-pointer transition-all uppercase tracking-wider hover:bg-white hover:text-gray-900">
-            GET YOUR MEMBERSHIP
-          </button>
+          
         </div>
       </div>
     </section>
