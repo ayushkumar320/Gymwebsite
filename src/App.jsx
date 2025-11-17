@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import AlternatingSection from "./components/AlternatingSection";
 import DietServicesBanner from "./components/DietServicesBanner";
 import GymAccessBanner from "./components/GymAccessBanner";
+import ConnectSection from "./components/ConnectSection";
 import Footer from "./components/Footer";
 import image1 from "./assets/photo/WhatsApp Image 2025-11-13 at 10.59.55.jpeg";
 import image2 from "./assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpeg";
@@ -87,7 +88,7 @@ function App() {
         />
       ))}
       <GymAccessBanner />
-
+      <ConnectSection />
       <Footer />
     </div>
   );
