@@ -1,0 +1,47 @@
+Project TODO — Gym Website (advertisement-focused)
+
+Goals
+- This is  a marketing/advertising site for the gym (no login/search). Primary CTAs: "Chat with us" and "View plans".
+- Clear sections for features, plans, coaches, gallery, contact, and membership details.
+- Mobile-first, responsive, fast, SEO-friendly (ye dekhna try krna vrna mai dekhlunga).
+
+Pages / Routes
+- /            — Landing / hero with 2 CTAs, logo, hero image(isse jitta chamka skte chamkana h)
+- /plans       — Plan listing (cards) with toggle: "General Gym" / "Personal Training" (mast animation etc cards shiny premium )
+- /coaches     — Coaches bios & certifications
+- /gallery     — Photos and equipment showcase
+- /contact     — Address, hours, map link, Chat button (i will integrate the whatsapp redirect in this)
+
+Content & Copy
+- Enhance features list (use LLM to write new points and refine tone & benefits). Include:
+    - Personal training packages
+    - Greenery in gym 
+    - Diet & nutrition assistance
+    - Trial / introductory offers
+    - Pause/Resume subscription options for specific plans
+
+- Coaches: cards with photo, role, specialties, brief bio, certifications 
+- Gallery: equipment categories, carousel/lightbox
+- Footer: address, hours, social links, simple sitemap
+- Remove: login, search, unnecessary buttons everywhere
+
+
+
+- Add gym logo
+
+Get more photos and information from here :- 
+https://www.google.com/search?q=bengaluru+fitness+club&oq=bengaluru+fitness+club&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgsIAhAAGAoYCxiABDIICAMQABgWGB4yCAgEEAAYFhgeMggIBRAAGBYYHjIGCAYQRRhBMgYIBxBFGD3SAQg2NTQ5ajBqMagCALACAA&sourceid=chrome&ie=UTF-8&lqi=ChZiZW5nYWx1cnUgZml0bmVzcyBjbHViSOHYjMKPr4CACFoiEAEQAhgAGAEYAiIWYmVuZ2FsdXJ1IGZpdG5lc3MgY2x1YpIBA2d5baoBYAoNL2cvMTFqOGhrN3RxcxABKhAiDGZpdG5lc3MgY2x1YigAMh8QASIb2YhHfAR9xSJL1ouL6tvhD6VHNq9L1CsDR_2vMhoQAiIWYmVuZ2FsdXJ1IGZpdG5lc3MgY2x1Yg#rlimm=620960675808681634
+
+
+BENGALURU FITNESS CLUB ye h name actual gym ka
+
+
+More about Pause/Resume subscription features
+isse showcase bhi krna h acchese 
+
+3 months subscription include 15 pause days in which a memebr can pause its membership for 15 days
+6 months 20 pause days
+12 months 30 pause days
+ye details add krna jab cards banawge for plans
+
+
