@@ -99,17 +99,6 @@ function ProductShowcase({products = []}) {
     setActiveIndex(index);
   };
 
-  useEffect(() => {
-    if (imageRef.current) {
-      imageRef.current.style.opacity = "0";
-      setTimeout(() => {
-        if (imageRef.current) {
-          imageRef.current.style.opacity = "1";
-        }
-      }, 300);
-    }
-  }, [activeIndex]);
-
   if (products.length === 0) return null;
 
   const activeProduct = products[activeIndex] || products[0];
@@ -123,7 +112,7 @@ function ProductShowcase({products = []}) {
             ref={imageRef}
             src={activeProduct.image}
             alt={activeProduct.name}
-            className="w-full h-full object-contain transition-opacity duration-500"
+            className="w-full h-full object-contain"
             loading="lazy"
           />
         </div>
