@@ -42,19 +42,9 @@ const ProductShowcaseSection = memo(function ProductShowcaseSection({
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          {product.smallDescription && (
-            <p className="text-[16px] text-[#999] leading-[1.8] mb-10">
-              {product.smallDescription}
-            </p>
-          )}
 
           <h2 className="text-[48px] font-bold text-[#d0d0d0] tracking-[0.02em] mb-6 uppercase leading-tight">
-            {product.name.split(' ').map((word, i) => (
-              <span key={i}>
-                {word}
-                {i < product.name.split(' ').length - 1 && <br />}
-              </span>
-            ))}
+            {product.name.toUpperCase()}
           </h2>
 
           <p className="text-[18px] text-[#666] leading-[1.7] max-w-[500px] mb-10">

@@ -8,42 +8,37 @@ import pa5 from '../assets/photo/PA5.jpeg'
 export const productShowcaseData = [
   {
     id: 1,
-    name: 'Onyx Fold Reformer',
-    smallDescription: 'Premium foldable design for space-efficient home studios',
+    name: 'Expert Coach',
     description:
-      'The Onyx Fold offers premium Pilates performance with a sleek, foldable design for effortless storage. Perfect for those who want studio-quality equipment without compromising on space.',
+      'Our certified and experienced coaches are dedicated to helping you achieve your fitness goals. With personalized attention and expert guidance, they provide the motivation and knowledge you need to transform your body and mind. Whether you are a beginner or advanced, our coaches adapt to your level and push you to reach new heights.',
     image: pa1,
   },
   {
     id: 2,
-    name: 'Onyx Reformer',
-    smallDescription: 'Sleek and bold, modern sophistication meets performance',
+    name: 'One to One Training',
     description:
-      'Sleek and bold, the Onyx Reformer brings modern sophistication to your Pilates routine. Engineered for precision and built to last, it delivers exceptional performance for every workout.',
+      'Experience personalized fitness training tailored specifically to your needs and goals. Our one-on-one sessions ensure you receive undivided attention, customized workout plans, and real-time feedback. Perfect for those who want focused guidance, faster results, and a training program designed exclusively for you.',
     image: pa2,
   },
   {
     id: 3,
-    name: 'Ivory Reformer',
-    smallDescription: 'Classic elegance meets high-performance Pilates',
+    name: 'Push Your Limit',
     description:
-      'Blending classic style with high-performance Pilates, the Ivory Reformer delivers perfect balance. Its elegant design complements any space while providing exceptional functionality.',
+      'Challenge yourself beyond your comfort zone with our intensive training programs. Designed to test your physical and mental boundaries, these sessions help you discover your true potential. Break through plateaus, build incredible strength, and achieve feats you never thought possible with our challenging workout routines.',
     image: pa3,
   },
   {
     id: 4,
-    name: 'Sienna Reformer',
-    smallDescription: 'Commercial-grade quality for professional studios',
+    name: 'Energetic Environment',
     description:
-      'Experience premium, commercial-grade Pilates machine designed for superior durability and performance. Built to withstand heavy use in professional studio environments.',
+      'Train in a vibrant, motivating atmosphere that fuels your workout energy. Our state-of-the-art facility features modern equipment, inspiring music, and an enthusiastic community of fitness enthusiasts. The positive energy and supportive atmosphere make every session enjoyable and help you stay committed to your fitness journey.',
     image: pa4,
   },
   {
     id: 5,
-    name: 'Maple Crest Reformer',
-    smallDescription: 'Timeless elegance crafted from premium materials',
+    name: 'World Class Cardio',
     description:
-      'Embrace timeless elegance with the Maple Reformer, crafted from premium maple wood. A statement piece that combines beautiful design with exceptional Pilates performance.',
+      'Elevate your cardiovascular fitness with our world-class cardio training programs. Featuring cutting-edge equipment and diverse workout styles including HIIT, running, cycling, and more. Improve your endurance, burn calories efficiently, and boost your heart health with our comprehensive cardio training designed for all fitness levels.',
     image: pa5,
   },
 ]
