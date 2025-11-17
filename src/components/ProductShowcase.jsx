@@ -16,7 +16,7 @@ const ProductShowcaseSection = memo(function ProductShowcaseSection({
           onInView(index);
         }
       },
-      {threshold: 0.3, rootMargin: "0px"}
+      {threshold: 0.5, rootMargin: "0px"}
     );
 
     if (sectionRef.current) {
@@ -38,7 +38,7 @@ const ProductShowcaseSection = memo(function ProductShowcaseSection({
       className="w-full h-screen flex items-center justify-center bg-white"
     >
       {/* Scrollable Content */}
-      <div className="w-full max-w-[600px] bg-white flex items-center px-8 md:px-12 lg:px-16 py-10 lg:py-0">
+      <div className="w-full max-w-[700px] bg-white flex items-center px-8 md:px-12 lg:px-20 py-12 lg:py-0">
         <div
           className={`w-full transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -48,8 +48,8 @@ const ProductShowcaseSection = memo(function ProductShowcaseSection({
             <p
               className={
                 isFeatured
-                  ? "text-[12px] md:text-[13px] uppercase tracking-[0.5em] text-[#7a7a7a] mb-6"
-                  : "text-[12px] md:text-[13px] uppercase tracking-[0.5em] text-[#7a7a7a] mb-6"
+                  ? "text-[13px] md:text-[14px] uppercase tracking-[0.5em] text-[#7a7a7a] mb-7"
+                  : "text-[13px] md:text-[14px] uppercase tracking-[0.5em] text-[#7a7a7a] mb-7"
               }
             >
               {product.smallDescription}
@@ -59,41 +59,30 @@ const ProductShowcaseSection = memo(function ProductShowcaseSection({
           <h2
             className={
               isFeatured
-                ? "text-[32px] md:text-[42px] font-bold text-[#0f0f0f] tracking-[0.08em] mb-5 uppercase leading-tight"
-                : "text-[32px] md:text-[38px] font-bold text-[#d0d0d0] tracking-[0.08em] mb-5 uppercase leading-tight"
+                ? "text-[40px] md:text-[52px] font-bold text-[#0f0f0f] tracking-[0.08em] mb-6 uppercase leading-tight"
+                : "text-[40px] md:text-[48px] font-bold text-[#0f0f0f] tracking-[0.08em] mb-6 uppercase leading-tight"
             }
           >
-            {isFeatured
-              ? product.name.toUpperCase()
-              : product.name.split(" ").map((word, i) => (
-                  <span key={i}>
-                    {word}
-                    {i < product.name.split(" ").length - 1 && <br />}
-                  </span>
-                ))}
+            {product.name.toUpperCase()}
           </h2>
 
           <p
             className={
               isFeatured
-                ? "text-[16px] md:text-[17px] text-[#1c1c1c] leading-[1.7] max-w-[520px] mb-8"
-                : "text-[16px] text-[#666] leading-[1.6] max-w-[500px] mb-8"
+                ? "text-[18px] md:text-[19px] text-[#1c1c1c] leading-[1.7] max-w-[600px] mb-10"
+                : "text-[18px] text-[#1c1c1c] leading-[1.6] max-w-[580px] mb-10"
             }
           >
             {product.description}
           </p>
 
           <button
-            className={
-              isFeatured
-                ? "bg-[#050505] text-white py-3 px-8 font-semibold text-[13px] tracking-[0.15em] uppercase rounded-none transition-colors duration-300 hover:bg-[#1a1a1a]"
-                : "bg-[#d0d0d0] text-white py-3 px-8 font-semibold text-[13px] tracking-[0.1em] uppercase rounded-none transition-colors duration-300 hover:bg-[#b0b0b0]"
-            }
+            className="relative bg-white text-black border-2 border-green-500 py-4 px-12 text-lg font-bold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:text-white hover:shadow-xl rounded-lg overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-green-500 before:transition-all before:duration-300 before:z-0 hover:before:w-full z-10"
             onClick={() => {
               console.log(`Clicked: ${product.name}`);
             }}
           >
-            {product.name.toUpperCase()}
+            <span className="relative z-20">{product.name.toUpperCase()}</span>
           </button>
         </div>
       </div>
