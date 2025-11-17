@@ -6,11 +6,10 @@ import DesignStudioSection from './components/DesignStudioSection'
 import AlternatingSection from './components/AlternatingSection'
 import BestReformer from './components/BestReformer'
 import StudioQuality from './components/StudioQuality'
-import JourneySection from './components/JourneySection'
 import DietServicesBanner from './components/DietServicesBanner'
+import GymAccessBanner from './components/GymAccessBanner'
 import ProductsSection from './components/ProductsSection'
 import PerfectionSection from './components/PerfectionSection'
-import AsSeenIn from './components/AsSeenIn'
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
 import { products } from './data/products'
@@ -63,12 +62,11 @@ function App() {
           imageFirst={section.imageFirst}
         />
       ))}
+      <GymAccessBanner />
       <BestReformer />
       <StudioQuality />
-      <JourneySection />
       <ProductsSection products={memoizedProducts} />
       <PerfectionSection />
-      <AsSeenIn />
       <Newsletter />
       <Footer />
     </div>
