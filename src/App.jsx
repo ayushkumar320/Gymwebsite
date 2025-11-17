@@ -4,22 +4,14 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import DesignStudioSection from './components/DesignStudioSection'
 import AlternatingSection from './components/AlternatingSection'
-import BestReformer from './components/BestReformer'
-import StudioQuality from './components/StudioQuality'
 import DietServicesBanner from './components/DietServicesBanner'
 import GymAccessBanner from './components/GymAccessBanner'
-import ProductsSection from './components/ProductsSection'
-import PerfectionSection from './components/PerfectionSection'
-import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
-import { products } from './data/products'
 import image1 from './assets/photo/WhatsApp Image 2025-11-13 at 10.59.55.jpeg'
 import image2 from './assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpeg'
 import image3 from './assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (2).jpeg'
 
 function App() {
-  // Memoize products to prevent recreation on every render
-  const memoizedProducts = useMemo(() => products, [])
 
   // Memoize alternating sections data to prevent recreation
   const alternatingSections = useMemo(
@@ -63,11 +55,7 @@ function App() {
         />
       ))}
       <GymAccessBanner />
-      <BestReformer />
-      <StudioQuality />
-      <ProductsSection products={memoizedProducts} />
-      <PerfectionSection />
-      <Newsletter />
+ 
       <Footer />
     </div>
   )
