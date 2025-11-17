@@ -1,32 +1,29 @@
-import { useMemo } from 'react'
+import {useMemo} from "react";
 
 const BANNER_ITEMS = [
-  'WEIGHT MANAGEMENT',
-  'WEIGHT LOSS',
-  'WEIGHT GAINING',
-  'DIET COUNSELING FROM EXPERT DIETICIANS',
-]
-
-const MARQUEE_REPEAT_COUNT = 3
+  "WEIGHT MANAGEMENT",
+  "WEIGHT LOSS",
+  "WEIGHT GAINING",
+  "DIET COUNSELING FROM EXPERT DIETICIANS",
+];
 
 function DietServicesBanner() {
-  const marqueeItems = useMemo(
-    () => Array.from({ length: MARQUEE_REPEAT_COUNT }).flatMap(() => BANNER_ITEMS),
-    []
-  )
+  const marqueeItems = useMemo(() => [...BANNER_ITEMS, ...BANNER_ITEMS], []);
 
   return (
-    <div className="bg-white text-black py-6 overflow-hidden">
-      <div className="flex items-center gap-8 whitespace-nowrap animate-scroll">
+    <section className="bg-white text-black py-10 border-y border-gray-200 overflow-hidden">
+      <div className="flex items-center gap-12 whitespace-nowrap animate-diet-scroll-reverse">
         {marqueeItems.map((item, index) => (
-          <span key={index} className="text-xs font-bold flex-shrink-0">
+          <span
+            key={`${item}-${index}`}
+            className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight"
+          >
             {item}
           </span>
         ))}
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default DietServicesBanner
-
+export default DietServicesBanner;
