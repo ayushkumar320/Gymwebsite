@@ -12,37 +12,66 @@ import image2 from './assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpe
 import image3 from './assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (2).jpeg'
 
 function App() {
+  // Memoize products to prevent recreation on every render
+  const memoizedProducts = useMemo(() => products, []);
 
   // Memoize alternating sections data to prevent recreation
   const alternatingSections = useMemo(
     () => [
       {
         image: image1,
-        heading: 'BEST REFORMER PILATES',
-        description: 'Achieve maximum results in minimal time with our versatile equipment, perfect for quick, effective workouts anywhere.',
+        heading: "BEST REFORMER PILATES",
+        description:
+          "Achieve maximum results in minimal time with our versatile equipment, perfect for quick, effective workouts anywhere.",
         imageFirst: false,
       },
       {
         image: image2,
-        heading: 'PREMIUM PILATES EQUIPMENT',
-        description: 'Experience professional-grade equipment designed for both home studios and commercial fitness centers.',
+        heading: "PREMIUM PILATES EQUIPMENT",
+        description:
+          "Experience professional-grade equipment designed for both home studios and commercial fitness centers.",
         imageFirst: true,
       },
       {
         image: image3,
-        heading: 'TRANSFORM YOUR FITNESS',
-        description: 'Elevate your Pilates practice with our expertly crafted reformers that combine style, functionality, and durability.',
+        heading: "TRANSFORM YOUR FITNESS",
+        description:
+          "Elevate your Pilates practice with our expertly crafted reformers that combine style, functionality, and durability.",
         imageFirst: false,
       },
     ],
     []
-  )
+  );
+
+  const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+  const [isOverlayFading, setIsOverlayFading] = useState(false);
+
+  useEffect(() => {
+    const fadeTimer = window.setTimeout(() => setIsOverlayFading(true), 250);
+    const removeTimer = window.setTimeout(
+      () => setIsOverlayVisible(false),
+      950
+    );
+
+    return () => {
+      window.clearTimeout(fadeTimer);
+      window.clearTimeout(removeTimer);
+    };
+  }, []);
 
   return (
     <div className="w-full min-h-screen bg-white text-gray-900 font-sans">
+      {isOverlayVisible && (
+        <div
+          className={`page-intro-overlay ${
+            isOverlayFading ? "page-intro-overlay--fade" : ""
+          }`}
+          aria-hidden="true"
+        />
+      )}
       <TopBanner />
       <Navbar />
-      <Hero />
+      <Hero allowReveal={isOverlayFading} />
       <DietServicesBanner />
       <DesignStudioSection />
       {alternatingSections.map((section, index) => (
@@ -58,7 +87,7 @@ function App() {
  
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
