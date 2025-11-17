@@ -12,9 +12,6 @@ import image2 from './assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpe
 import image3 from './assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (2).jpeg'
 
 function App() {
-  // Memoize products to prevent recreation on every render
-  const memoizedProducts = useMemo(() => products, []);
-
   // Memoize alternating sections data to prevent recreation
   const alternatingSections = useMemo(
     () => [
