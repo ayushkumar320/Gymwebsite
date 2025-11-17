@@ -1,16 +1,28 @@
 import { useMemo } from 'react'
 
+const MEDIA_BRANDS = [
+  'NEWS.com.au',
+  'are media',
+  'yahoo!',
+  'BuzzFeed',
+  "Woman's Day",
+  "Women's Weekly",
+  'Who AUSTRALIA',
+  'SITCHU.',
+  'Daily Mail',
+  'BROADSHEET',
+]
+
 function AsSeenIn() {
   // Memoize brand logos array to prevent recreation
-  const brandLogos = useMemo(() => Array.from({ length: 14 }, (_, i) => i), [])
+  const brandLogos = useMemo(() => MEDIA_BRANDS, [])
 
   return (
-    <section className="py-20 px-5 text-center bg-white">
-      <h3 className="text-2xl font-semibold mb-10 text-gray-600">As seen in</h3>
-      <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
-        {brandLogos.map((i) => (
-          <div key={i} className="py-4 px-8 bg-gray-100 rounded text-sm font-medium text-gray-600">
-            FitBoutique
+    <section className="py-12 px-5 bg-white overflow-hidden">
+      <div className="flex items-center justify-center gap-12 md:gap-16 flex-wrap md:flex-nowrap max-w-7xl mx-auto">
+        {brandLogos.map((brand, index) => (
+          <div key={index} className="text-gray-900 text-base md:text-lg lg:text-xl font-medium whitespace-nowrap flex-shrink-0">
+            {brand}
           </div>
         ))}
       </div>
