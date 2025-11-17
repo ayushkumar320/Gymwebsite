@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import TopBanner from './components/TopBanner'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
