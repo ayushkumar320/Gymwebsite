@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import img1 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.55.jpeg'
 import img2 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56.jpeg'
 import img3 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56 (1).jpeg'
@@ -17,32 +17,73 @@ const images = [
 
 function ConnectSection() {
   const galleryImages = useMemo(() => images, [])
+  const [selectedImage, setSelectedImage] = useState(null)
+
+  const openModal = (image) => {
+    setSelectedImage(image)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null)
+    document.body.style.overflow = 'unset'
+  }
 
   return (
-    <section className="w-full bg-white py-8 md:py-12">
-      {/* Header */}
-      <div className="w-full px-5 text-center mb-8 md:mb-12">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-wide">
-          <span className="text-gray-900">CONNECT WITH US</span>{' '}
-          <span className="text-gray-600">@BFC</span>
-        </h2>
-      </div>
+    <>
+      <section className="w-full bg-white py-8 md:py-12">
+        {/* Header */}
+        <div className="w-full px-5 text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-wide">
+            <span className="text-gray-900">CONNECT WITH US</span>{' '}
+            <span className="text-gray-600">@BFC</span>
+          </h2>
+        </div>
 
-      {/* Image Gallery Grid - 1 row x 6 columns */}
-      <div className="grid grid-cols-6 gap-0">
-        {galleryImages.map((image, index) => (
-          <div key={index} className="relative w-full aspect-[4/3] overflow-hidden group">
+        {/* Image Gallery Grid - 1 row x 6 columns */}
+        <div className="grid grid-cols-6 gap-0">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="relative w-full aspect-[4/3] overflow-hidden group cursor-pointer"
+              onClick={() => openModal(image)}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Modal/Enlarged Image */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={closeModal}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 transition-colors z-10"
+            onClick={closeModal}
+            aria-label="Close"
+          >
+            ×
+          </button>
+          <div className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center">
             <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              loading="lazy"
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
             />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      )}
+    </>
   )
 }
 

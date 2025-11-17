@@ -5,8 +5,10 @@ import Hero from "./components/Hero";
 import AlternatingSection from "./components/AlternatingSection";
 import DietServicesBanner from "./components/DietServicesBanner";
 import GymAccessBanner from "./components/GymAccessBanner";
+import ProductShowcase from "./components/ProductShowcase";
 import ConnectSection from "./components/ConnectSection";
 import Footer from "./components/Footer";
+import { productShowcaseData } from "./data/productShowcase";
 import image1 from "./assets/photo/WhatsApp Image 2025-11-13 at 10.59.55.jpeg";
 import image2 from "./assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpeg";
 import image3 from "./assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (2).jpeg";
@@ -88,6 +90,7 @@ function App() {
         />
       ))}
       <GymAccessBanner />
+      <ProductShowcase products={productShowcaseData} />
       <ConnectSection />
       <Footer />
     </div>
