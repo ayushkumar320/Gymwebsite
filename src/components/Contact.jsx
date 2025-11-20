@@ -18,7 +18,7 @@ const Contact = () => {
                         Get In Touch
                     </h2>
                     <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9]">
-                        Visit Our <br className="md:hidden" /> Club
+                        Kickstart Your <br className="md:hidden" /> Journey
                     </h1>
                 </div>
             </div>
