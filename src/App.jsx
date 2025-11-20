@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import TopBanner from "./components/TopBanner";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
+import Gallery from "./components/Gallery";
 
 function App() {
+  const location = useLocation();
+  const isGalleryPage = location.pathname === '/gallery';
 
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
   const [isOverlayFading, setIsOverlayFading] = useState(false);
@@ -26,20 +29,21 @@ function App() {
 
   return (
     <div className="w-full min-h-screen bg-white text-gray-900 font-sans">
-      {isOverlayVisible && (
+      {isOverlayVisible && !isGalleryPage && (
         <div
           className={`page-intro-overlay ${isOverlayFading ? "page-intro-overlay--fade" : ""
             }`}
           aria-hidden="true"
         />
       )}
-      <TopBanner />
+      {!isGalleryPage && <TopBanner />}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home isOverlayFading={isOverlayFading} />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
-      <Footer />
+      {!isGalleryPage && <Footer />}
     </div>
   );
 }
