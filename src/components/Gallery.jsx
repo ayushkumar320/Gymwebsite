@@ -19,7 +19,7 @@ function Gallery() {
             </div>
         </div>
 
-        <div className="relative z-20 pb-20 px-4 md:px-8">
+        <div className="relative z-20 pb-20">
              <DemoVariant1 />
         </div>
     </div>
