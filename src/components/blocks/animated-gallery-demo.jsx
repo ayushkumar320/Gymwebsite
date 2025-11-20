@@ -28,7 +28,7 @@ const IMAGES_3 = [img9, img10, img11, img12]
 
 export const DemoVariant1 = () => {
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-white pt-20">
 
 
       <div

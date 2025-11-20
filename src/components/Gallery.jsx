@@ -2,7 +2,7 @@ import { DemoVariant1 } from './blocks/animated-gallery-demo'
 
 function Gallery() {
   return (
-    <div className="w-full min-h-screen bg-[#FDFDFD] font-sans relative">
+    <div className="w-full min-h-screen bg-white font-sans relative">
         {/* Dark Header Section for Navbar Visibility */}
         <div className="w-full bg-[#111111] pt-40 pb-32 px-4 md:px-8 relative overflow-hidden rounded-b-[3rem]">
             {/* Background Accents */}

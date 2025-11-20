@@ -111,7 +111,7 @@ export const GalleryContainer = ({
   return (
     <motion.div
       className={cn(
-        'relative grid size-full grid-cols-3 gap-2',
+        'relative grid size-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-2',
         className
       )}
       style={{
