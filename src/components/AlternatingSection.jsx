@@ -1,10 +1,11 @@
-import {memo, useMemo} from "react";
+import { memo, useMemo } from "react";
 
 const AlternatingSection = memo(function AlternatingSection({
   image,
   heading,
   description,
   imageFirst = true,
+  onPauseClick,
 }) {
   // Memoize image source to prevent recreation
   const imageSrc = useMemo(() => image, [image]);
@@ -31,7 +32,22 @@ const AlternatingSection = memo(function AlternatingSection({
                 <span className="text-yellow-500 font-bold text-xl mt-1">
                   •
                 </span>
-                <span className="flex-1">{line.replace("•", "").trim()}</span>
+                {line.includes("pause days") ? (
+                  <button
+                    onClick={() => {
+                      const days = parseInt(line.match(/(\d+)/)[0]);
+                      onPauseClick(days);
+                    }}
+                    className="flex-1 text-left font-bold text-green-600 hover:text-green-700 hover:underline decoration-2 underline-offset-4 transition-all cursor-pointer bg-green-50 hover:bg-green-100 px-2 rounded-md -ml-2"
+                  >
+                    {line.replace("•", "").trim()}
+                    <span className="ml-2 text-sm font-normal text-gray-500 no-underline">
+                      (Click for details)
+                    </span>
+                  </button>
+                ) : (
+                  <span className="flex-1">{line.replace("•", "").trim()}</span>
+                )}
               </div>
             );
           }
