@@ -61,7 +61,7 @@ function Footer() {
             </p>
             <div className="flex gap-4">
               {[Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="text-gray-400 hover:text-green-500 transition-colors p-2 hover:bg-white/5 rounded-full">
+                <a key={i} href="https://www.instagram.com/bengaluru_fitness_club/" className="text-gray-400 hover:text-green-500 transition-colors p-2 hover:bg-white/5 rounded-full">
                   <Icon size={20} />
                 </a>
               ))}

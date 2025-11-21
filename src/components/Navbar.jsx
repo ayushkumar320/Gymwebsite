@@ -16,7 +16,6 @@ function throttle(func, wait) {
 // Updated Menu Items based on tasks.todo
 const MENU_ITEMS = [
   { label: 'Plans', href: '/plans' },
-  { label: 'Gallery', href: '/gallery' },
   { label: 'Contact', href: '/contact' }
 ]
 
@@ -65,7 +64,7 @@ function Navbar() {
         <Link 
           to="/" 
           className={`text-3xl font-black tracking-tighter uppercase transition-colors ${
-            isScrolled ? 'text-gray-900' : 'text-white'
+            isScrolled ? 'text-gray-900' : 'text-bfc-yellow'
           }`}
         >
           BFC
