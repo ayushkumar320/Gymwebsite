@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import image1 from "../assets/photo/WhatsApp Image 2025-11-13 at 10.59.55.jpeg";
-import image2 from "../assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpeg";
-import image3 from "../assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (2).jpeg";
-import image4 from "../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56.jpeg";
-import image5 from "../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56 (1).jpeg";
+import img6 from "../assets/photo/img6.jpeg";
+import img10 from "../assets/photo/img10.jpeg";
+import img11 from "../assets/photo/img11.jpeg";
+import img7 from "../assets/photo/img7.jpeg";
+import img8 from "../assets/photo/img8.jpeg";
 
 const images = [
-  { src: image4, alt: "Gym Community 1" },
-  { src: image2, alt: "Gym Community 2" },
-  { src: image3, alt: "Gym Community 3" },
-  { src: image1, alt: "Gym Community 4" },
-  { src: image5, alt: "Gym Community 5" },
-  { src: image4, alt: "Gym Community 6" }, // Duplicate for seamless loop
-  { src: image2, alt: "Gym Community 7" },
+  { src: img7, alt: "Gym Community 1" },
+  { src: img10, alt: "Gym Community 2" },
+  { src: img11, alt: "Gym Community 3" },
+  { src: img6, alt: "Gym Community 4" },
+  { src: img8, alt: "Gym Community 5" },
+  { src: img7, alt: "Gym Community 6" }, // Duplicate for seamless loop
+  { src: img10, alt: "Gym Community 7" },
 ];
 
 function CommunityGallery() {

@@ -1,19 +1,19 @@
 import { useMemo, useState } from 'react'
-import img1 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.55.jpeg'
-import img2 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56.jpeg'
-import img3 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56 (1).jpeg'
-import img4 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56 (2).jpeg'
-import img5 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpeg'
-import img6 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (2).jpeg'
+import img6 from '../assets/photo/img6.jpeg'
+import img7 from '../assets/photo/img7.jpeg'
+import img8 from '../assets/photo/img8.jpeg'
+import img9 from '../assets/photo/img9.jpeg'
+import img10 from '../assets/photo/img10.jpeg'
+import img11 from '../assets/photo/img11.jpeg'
 import { FaWhatsapp } from 'react-icons/fa'
 
 const images = [
-  { src: img1, alt: 'The Ivory Reformer' },
-  { src: img2, alt: 'Pilates Instruction Session' },
-  { src: img3, alt: 'Home Workout Class' },
-  { src: img4, alt: 'Modern Pilates Studio' },
-  { src: img5, alt: 'Outdoor Pilates' },
-  { src: img6, alt: 'Luxury Studio Pilates' },
+  { src: img6, alt: 'The Ivory Reformer' },
+  { src: img7, alt: 'Pilates Instruction Session' },
+  { src: img8, alt: 'Home Workout Class' },
+  { src: img9, alt: 'Modern Pilates Studio' },
+  { src: img10, alt: 'Outdoor Pilates' },
+  { src: img11, alt: 'Luxury Studio Pilates' },
 ]
 
 function ConnectSection() {

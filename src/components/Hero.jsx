@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import videoBg from "../assets/WhatsApp Video 2025-11-13 at 11.00.30.mp4";
+import videoBg from "../assets/Hero_Video.mp4";
 import { FaWhatsapp } from "react-icons/fa";
 
 function Hero({allowReveal = true}) {
