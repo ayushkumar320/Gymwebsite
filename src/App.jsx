@@ -8,6 +8,8 @@ import MembershipPlans from "./components/MembershipPlans";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 import TopBanner from "./components/TopBanner";
+import TermsOfService from "./components/TermsOfService";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
   const location = useLocation();
@@ -53,6 +55,8 @@ function App() {
         <Route path="/plans" element={<MembershipPlans />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       {!isGalleryPage && <Footer />}
     </div>
