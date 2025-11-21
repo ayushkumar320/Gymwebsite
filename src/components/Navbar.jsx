@@ -15,9 +15,7 @@ function throttle(func, wait) {
 
 // Updated Menu Items based on tasks.todo
 const MENU_ITEMS = [
-  { label: 'Home', href: '/' },
   { label: 'Plans', href: '/plans' },
-  { label: 'Coaches', href: '/coaches' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Contact', href: '/contact' }
 ]

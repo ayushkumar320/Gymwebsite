@@ -37,8 +37,8 @@ function Hero({allowReveal}) {
         <source src={videoBg} type="video/mp4" />
       </video>
 
-      {/* Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
+      {/* Gradient Overlay (Scrim) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/80 z-10"></div>
 
       {/* Content */}
       <div
@@ -46,14 +46,14 @@ function Hero({allowReveal}) {
           showContent ? "hero-content--visible" : ""
         }`}
       >
-        <h2 className="text-bfc-yellow font-bold tracking-widest text-sm md:text-lg mb-4 uppercase">
+        <h2 className="text-bfc-yellow font-display font-bold tracking-widest text-lg md:text-xl mb-4 uppercase">
           Bengaluru Fitness Connection
         </h2>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-none mb-6 text-white/90 uppercase tracking-tighter">
+        <h1 className="font-display text-5xl sm:text-7xl md:text-8xl font-bold leading-none mb-6 text-white uppercase tracking-tight">
           Unleash Your <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/90 to-gray-400">True Potential</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">True Potential</span>
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl mb-10 text-gray-300 max-w-2xl mx-auto font-medium">
+        <p className="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto font-medium tracking-wide">
           Experience world-class training, premium equipment, and a supportive community that pushes you further.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -61,11 +61,18 @@ function Hero({allowReveal}) {
             href="https://wa.me/919876543210"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative bg-bfc-yellow text-black border-2 border-bfc-yellow py-4 px-10 text-base font-black cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-black hover:text-white hover:border-bfc-yellow hover:shadow-[0_0_20px_rgba(244,196,48,0.5)] rounded-full overflow-hidden z-10 flex items-center gap-2"
+            className="relative bg-bfc-yellow text-black border-2 border-bfc-yellow py-4 px-10 text-lg font-display font-bold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-black hover:text-white hover:border-bfc-yellow hover:shadow-[0_0_30px_rgba(244,196,48,0.4)] rounded-full overflow-hidden z-10 flex items-center gap-2 group"
           >
-            <FaWhatsapp className="text-xl" />
+            <FaWhatsapp className="text-2xl group-hover:scale-110 transition-transform" />
             <span className="relative z-20">Start Your Journey</span>
           </a>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+        <div className="w-[30px] h-[50px] rounded-full border-2 border-white/30 flex justify-center p-2">
+          <div className="w-1 h-3 bg-white/80 rounded-full animate-scroll-down"></div>
         </div>
       </div>
     </section>

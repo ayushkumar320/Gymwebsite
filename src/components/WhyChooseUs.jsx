@@ -47,21 +47,7 @@ function WhyChooseUs() {
   return (
     <section className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Decorative Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-        <svg width="100%" height="100%">
-          <pattern
-            id="pattern-circles"
-            x="0"
-            y="0"
-            width="40"
-            height="40"
-            patternUnits="userSpaceOnUse"
-          >
-            <circle cx="2" cy="2" r="2" className="text-black" fill="currentColor" />
-          </pattern>
-          <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
-        </svg>
-      </div>
+      <div className="absolute inset-0 bg-plus-white opacity-60 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
@@ -96,18 +82,18 @@ function WhyChooseUs() {
             <motion.div
               key={index}
               variants={item}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 group border border-gray-100 relative overflow-hidden"
+              className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-white/20 relative overflow-hidden hover:-translate-y-2"
             >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-bfc-yellow/10 rounded-bl-full -mr-4 -mt-4 transition-transform duration-300 group-hover:scale-150"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-bfc-yellow/20 to-transparent rounded-bl-full -mr-8 -mt-8 transition-transform duration-500 group-hover:scale-150"></div>
               
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-bfc-yellow rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:rotate-6 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-bfc-yellow to-yellow-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:rotate-6 transition-transform duration-500 text-black">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-4 uppercase text-gray-900 tracking-tight group-hover:text-bfc-yellow-hover transition-colors">
+                <h3 className="text-2xl font-display font-bold mb-4 uppercase text-gray-900 tracking-wide group-hover:text-bfc-yellow-hover transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed font-medium">
+                <p className="text-gray-600 leading-relaxed font-medium">
                   {feature.description}
                 </p>
               </div>

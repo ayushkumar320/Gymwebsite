@@ -17,17 +17,13 @@ import {
 // Static data
 const MENU_LINKS = [
   { label: 'Privacy Policy', href: '#' },
-  { label: 'Terms & Conditions', href: '#' },
-  { label: 'Return & Refund Policy', href: '#' },
-  { label: 'Shipping Information', href: '#' },
-  { label: 'Warranty', href: '#' }
+  { label: 'Terms & Conditions', href: '#' }
 ]
 
 const HELP_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Contact Us', href: '/contact' },
-  { label: 'About Us', href: '#' },
-  { label: 'Blog', href: '#' }
+  { label: 'Contact Us', href: '/contact' }
+
 ]
 
 const SERVICE_LINKS = [
@@ -60,6 +56,26 @@ function Footer() {
   return (
     <footer className="bg-[#0a0a0a] text-white pt-20 pb-10 px-6 border-t border-white/5 font-sans">
       <div className="max-w-7xl mx-auto">
+        {/* Big CTA */}
+        <div className="mb-20 border-b border-white/10 pb-20">
+          <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter text-white mb-8">
+            Ready To <span className="text-transparent bg-clip-text bg-gradient-to-r from-bfc-yellow to-yellow-600">Start?</span>
+          </h2>
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
+            <p className="text-xl text-gray-400 max-w-xl">
+              Join the most premium fitness community in Bengaluru. Your journey to greatness begins here.
+            </p>
+            <a 
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-bfc-yellow transition-colors duration-300"
+            >
+              Join Now
+            </a>
+          </div>
+        </div>
+
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           {/* Brand Column */}

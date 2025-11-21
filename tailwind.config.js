@@ -9,6 +9,10 @@ export default {
         "bfc-black": "#000000",
         "bfc-dark-gray": "#1A1A1A",
       },
+      fontFamily: {
+        sans: ['Manrope', 'sans-serif'],
+        display: ['Oswald', 'sans-serif'],
+      },
       animation: {
         scroll: "scroll 30s linear infinite",
         "scroll-reverse": "scroll-reverse 30s linear infinite",

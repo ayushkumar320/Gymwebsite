@@ -130,7 +130,10 @@ function MembershipPlans() {
   const plans = activeTab === "gym" ? gymPlans : ptPlans;
 
   return (
-    <section className="py-24 bg-white text-gray-900 relative overflow-hidden" id="membership-plans">
+    <section className="py-24 bg-white relative overflow-hidden" id="plans">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-grid-white pointer-events-none"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter italic">
