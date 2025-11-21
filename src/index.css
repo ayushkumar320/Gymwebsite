@@ -13,7 +13,25 @@
     overflow-x: hidden;
   }
 
-  /* Custom Scrollbar */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .animate-shine {
+    animation: shine 3s linear infinite;
+  }
+  
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 4px;
   }

@@ -1,9 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from "./SEO";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-black text-white pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      <SEO 
+        title="Privacy Policy"
+        description="Learn how Bengaluru Fitness Connection collects, uses, and protects your personal information. Your privacy is our priority."
+        keywords="privacy policy, data protection, gym privacy, bfc privacy"
+      />
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

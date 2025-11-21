@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "lenis";
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
@@ -10,19 +11,21 @@ import Gallery from "./components/Gallery";
 import TopBanner from "./components/TopBanner";
 import TermsOfService from "./components/TermsOfService";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import NotFound from "./components/NotFound";
 
 function App() {
   const location = useLocation();
   const isGalleryPage = location.pathname === '/gallery';
+  const isNotFoundPage = location.pathname === '/404' || !['/', '/plans', '/contact', '/gallery', '/terms', '/privacy'].includes(location.pathname);
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.8, // Reduced from 1.2 for more control
+      duration: 0.8,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       direction: "vertical",
       gestureDirection: "vertical",
       smooth: true,
-      mouseMultiplier: 0.8, // Reduced sensitivity
+      mouseMultiplier: 0.8,
       smoothTouch: false,
       touchMultiplier: 2,
     });
@@ -44,22 +47,25 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-bfc-yellow selection:text-black">
-      {/* Global Noise Overlay */}
-      <div className="bg-noise-overlay"></div>
-      
-      {!isGalleryPage && <TopBanner />}
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/plans" element={<MembershipPlans />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/terms" element={<TermsOfService />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-      </Routes>
-      {!isGalleryPage && <Footer />}
-    </div>
+    <HelmetProvider>
+      <div className="min-h-screen bg-black text-white font-sans selection:bg-bfc-yellow selection:text-black">
+        {/* Global Noise Overlay */}
+        <div className="bg-noise-overlay"></div>
+        
+        {!isGalleryPage && !isNotFoundPage && <TopBanner />}
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/plans" element={<MembershipPlans />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        {!isGalleryPage && !isNotFoundPage && <Footer />}
+      </div>
+    </HelmetProvider>
   );
 }
 

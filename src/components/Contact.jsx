@@ -7,6 +7,11 @@ const Contact = () => {
 
     return (
         <div className="w-full min-h-screen bg-[#FDFDFD] font-sans relative">
+            <SEO 
+                title="Contact Us"
+                description="Get in touch with Bengaluru Fitness Connection. Visit our gym, call us, or chat on WhatsApp. We are here to help you start your fitness journey."
+                keywords="contact gym, gym location, gym phone number, bfc contact"
+            />
             {/* Dark Header Section for Navbar Visibility */}
             <div className="w-full bg-[#111111] pt-40 pb-32 px-4 md:px-8 relative overflow-hidden rounded-b-[3rem]">
                 {/* Background Accents */}

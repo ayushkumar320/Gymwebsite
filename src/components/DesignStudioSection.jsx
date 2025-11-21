@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import image1 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56.jpeg'
+import image1 from '../assets/photo/img7.jpeg'
 
 function DesignStudioSection() {
   // Memoize image source to prevent recreation

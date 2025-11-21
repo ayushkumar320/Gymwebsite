@@ -1,9 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from "./SEO";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-black text-white pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      <SEO 
+        title="Terms of Service"
+        description="Read the Terms of Service for Bengaluru Fitness Connection. Understand our membership rules, policies, and user agreements."
+        keywords="terms of service, gym rules, membership agreement, bfc policies"
+      />
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

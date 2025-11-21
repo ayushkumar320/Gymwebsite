@@ -123,6 +123,8 @@ const item = {
   show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 50 } },
 };
 
+import SEO from "./SEO";
+
 function MembershipPlans() {
   const [activeTab, setActiveTab] = useState("gym");
   const navigate = useNavigate();
@@ -131,6 +133,11 @@ function MembershipPlans() {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden" id="plans">
+      <SEO 
+        title="Membership Plans"
+        description="Affordable gym membership and personal training plans at BFC. Choose from monthly, quarterly, or yearly packages tailored to your fitness goals."
+        keywords="gym membership, personal training cost, fitness plans, gym fees bengaluru"
+      />
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-white pointer-events-none"></div>
 
