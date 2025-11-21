@@ -40,8 +40,8 @@ function CommunityGallery() {
       </div>
 
       {/* Marquee Container */}
-      <div className="relative w-full overflow-hidden">
-        <div className="flex gap-6 animate-scroll hover:pause">
+      <div className="relative w-full overflow-x-auto overflow-y-hidden no-scrollbar touch-pan-x">
+        <div className="flex gap-6 animate-scroll hover:pause min-w-max px-4">
           {[...images, ...images].map((img, index) => (
             <div
               key={index}

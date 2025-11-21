@@ -1,45 +1,56 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import TopBanner from "./components/TopBanner";
+import Lenis from "lenis";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
+import MembershipPlans from "./components/MembershipPlans";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
+import TopBanner from "./components/TopBanner";
 
 function App() {
   const location = useLocation();
   const isGalleryPage = location.pathname === '/gallery';
 
-  const [isOverlayVisible, setIsOverlayVisible] = useState(true);
-  const [isOverlayFading, setIsOverlayFading] = useState(false);
-
   useEffect(() => {
-    const fadeTimer = window.setTimeout(() => setIsOverlayFading(true), 250);
-    const removeTimer = window.setTimeout(
-      () => setIsOverlayVisible(false),
-      950
-    );
+    const lenis = new Lenis({
+      duration: 0.8, // Reduced from 1.2 for more control
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
+      smooth: true,
+      mouseMultiplier: 0.8, // Reduced sensitivity
+      smoothTouch: false,
+      touchMultiplier: 2,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
 
     return () => {
-      window.clearTimeout(fadeTimer);
-      window.clearTimeout(removeTimer);
+      lenis.destroy();
     };
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
-    <div className="w-full min-h-screen bg-white text-gray-900 font-sans">
-      {isOverlayVisible && !isGalleryPage && (
-        <div
-          className={`page-intro-overlay ${isOverlayFading ? "page-intro-overlay--fade" : ""
-            }`}
-          aria-hidden="true"
-        />
-      )}
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-bfc-yellow selection:text-black">
+      {/* Global Noise Overlay */}
+      <div className="bg-noise-overlay"></div>
+      
       {!isGalleryPage && <TopBanner />}
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home isOverlayFading={isOverlayFading} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/plans" element={<MembershipPlans />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>

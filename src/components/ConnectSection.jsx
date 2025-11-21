@@ -51,17 +51,19 @@ function ConnectSection() {
           </a>
         </div>
 
-        {/* Image Gallery Grid - 1 row x 6 columns */}
-        <div className="grid grid-cols-6 gap-0">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="relative w-full aspect-[4/3] overflow-hidden group cursor-pointer"
-              onClick={() => openModal(image)}
+        {/* Image Grid - Horizontal Scroll on Mobile */}
+        <div className="flex md:grid md:grid-cols-3 gap-4 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory md:snap-none no-scrollbar">
+          {images.map((img, index) => (
+            <div 
+              key={index} 
+              className={`relative rounded-2xl overflow-hidden group min-w-[280px] md:min-w-0 h-[300px] md:h-64 snap-center cursor-pointer ${
+                index === 0 ? "md:col-span-2 md:row-span-2 md:h-[530px]" : ""
+              }`}
+              onClick={() => openModal(img)}
             >
               <img
-                src={image.src}
-                alt={image.alt}
+                src={img.src}
+                alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 loading="lazy"
               />

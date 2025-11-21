@@ -56,7 +56,7 @@ function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter"
+            className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter text-black"
           >
             Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-bfc-yellow to-yellow-600">BFC</span>
           </motion.h2>

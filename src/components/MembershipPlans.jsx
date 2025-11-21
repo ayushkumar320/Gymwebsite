@@ -136,8 +136,8 @@ function MembershipPlans() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter italic">
-            Membership <span className="text-transparent bg-clip-text bg-gradient-to-r from-bfc-yellow to-yellow-500">Plans</span>
+          <h2 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter italic text-black">
+            Membership <span className="text-transparent bg-clip-text bg-gradient-to-r from-bfc-yellow to-yellow-500">Plans &nbsp;</span>
           </h2>
 
           {/* Toggle Switch */}
@@ -148,7 +148,8 @@ function MembershipPlans() {
               }`}
             ></div>
             <button
-              className={`relative z-10 px-8 py-3 rounded-full font-black uppercase tracking-wide transition-colors duration-300 flex items-center gap-2 text-sm md:text-base ${
+              type="button"
+              className={`relative z-10 px-8 py-3 rounded-full font-black uppercase tracking-wide transition-colors duration-300 flex items-center gap-2 text-sm md:text-base cursor-pointer select-none ${
                 activeTab === "gym" ? "text-black" : "text-gray-500 hover:text-gray-900"
               }`}
               onClick={() => setActiveTab("gym")}
@@ -156,7 +157,8 @@ function MembershipPlans() {
               <FaUserFriends className="text-lg" /> Gym Membership
             </button>
             <button
-              className={`relative z-10 px-8 py-3 rounded-full font-black uppercase tracking-wide transition-colors duration-300 flex items-center gap-2 text-sm md:text-base ${
+              type="button"
+              className={`relative z-10 px-8 py-3 rounded-full font-black uppercase tracking-wide transition-colors duration-300 flex items-center gap-2 text-sm md:text-base cursor-pointer select-none ${
                 activeTab === "pt" ? "text-black" : "text-gray-500 hover:text-gray-900"
               }`}
               onClick={() => setActiveTab("pt")}

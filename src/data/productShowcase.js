@@ -1,5 +1,5 @@
 import pa1 from '../assets/photo/PA1.jpeg'
-import pa2 from '../assets/photo/PA2.jpeg'
+import pa2 from '../assets/photo/PA2_.jpeg'
 import pa3 from '../assets/photo/PA3.jpeg'
 import pa4 from '../assets/photo/PA4.jpeg'
 import pa5 from '../assets/photo/PA5.jpeg'

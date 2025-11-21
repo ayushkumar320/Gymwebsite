@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import videoBg from "../assets/WhatsApp Video 2025-11-13 at 11.00.30.mp4";
 import { FaWhatsapp } from "react-icons/fa";
 
-function Hero({allowReveal}) {
+function Hero({allowReveal = true}) {
   const [isVideoReady, setIsVideoReady] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [showContent, setShowContent] = useState(false);
@@ -49,6 +50,7 @@ function Hero({allowReveal}) {
         <h2 className="text-bfc-yellow font-display font-bold tracking-widest text-lg md:text-xl mb-4 uppercase">
           Bengaluru Fitness Connection
         </h2>
+        
         <h1 className="font-display text-5xl sm:text-7xl md:text-8xl font-bold leading-none mb-6 text-white uppercase tracking-tight">
           Unleash Your <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">True Potential</span>
