@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
     const address = "BFC Bengaluru Fitness Club · Tatanagar, Devinagar, Bengaluru, Karnataka 560092";
     const mapLink = "https://maps.app.goo.gl/9UrpCRn1fRKuaB1v7";
-    const whatsappNumber = "919876543210"; // Placeholder
+    const whatsappNumber = "918050022645"; // Placeholder
 
     return (
         <div className="w-full min-h-screen bg-[#FDFDFD] font-sans relative">

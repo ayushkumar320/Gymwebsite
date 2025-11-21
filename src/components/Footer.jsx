@@ -39,7 +39,7 @@ function Footer() {
               Join the most premium fitness community in Bengaluru. Your journey to greatness begins here.
             </p>
             <a 
-              href="https://wa.me/919876543210"
+              href="https://wa.me/918050022645"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-bfc-yellow transition-colors duration-300"

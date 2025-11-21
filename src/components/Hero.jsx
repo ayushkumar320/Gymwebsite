@@ -60,7 +60,7 @@ function Hero({allowReveal = true}) {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="https://wa.me/919876543210"
+            href="https://wa.me/918050022645"
             target="_blank"
             rel="noopener noreferrer"
             className="relative bg-bfc-yellow text-black border-2 border-bfc-yellow py-4 px-10 text-lg font-display font-bold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-black hover:text-white hover:border-bfc-yellow hover:shadow-[0_0_30px_rgba(244,196,48,0.4)] rounded-full overflow-hidden z-10 flex items-center gap-2 group"

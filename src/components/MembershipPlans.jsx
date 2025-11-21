@@ -248,7 +248,7 @@ function MembershipPlans() {
         >
             <button 
                 onClick={() => navigate('/plans')}
-                className="inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest border-b-2 border-bfc-yellow pb-1 hover:text-bfc-yellow-hover transition-colors group"
+                className="inline-flex items-center gap-3 text-lg font-bold uppercase tracking-widest border-b-2 border-bfc-yellow pb-1 text-bfc-yellow hover:text-black transition-colors group"
             >
                 View All Plans 
                 <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
