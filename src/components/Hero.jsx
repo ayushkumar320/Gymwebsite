@@ -45,10 +45,10 @@ function Hero({allowReveal}) {
           showContent ? "hero-content--visible" : ""
         }`}
       >
-        <h1 className="text-6xl md:text-5xl sm:text-4xl font-bold leading-tight mb-5 text-white">
-          UNLIMITED ACCESS TO THE GYM
+        <h1 className="text-9xl md:text-6xl sm:text-5xl font-extrabold leading-tight mb-5 text-white">
+          BENGALURU FITNESS CONNECTION
         </h1>
-        <p className="text-3xl md:text-2xl mb-8 text-white">SUNDAY OPEN</p>
+        <p className="text-3xl md:text-2xl mb-8 text-white">START YOUR FITNESS JOURNEY WITH US</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="relative bg-transparent text-white border-2 border-white py-4 px-10 text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:text-white hover:shadow-xl rounded-lg overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-green-500 before:transition-all before:duration-300 before:z-0 hover:before:w-full z-10">
             <span className="relative z-20">CONNECT WITH US</span>

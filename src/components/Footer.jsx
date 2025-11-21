@@ -37,12 +37,12 @@ const SERVICE_LINKS = [
   { label: 'Personal Training', href: '#' }
 ]
 
-const FEATURES = [
-  { icon: Heart, text: 'LGBTQ Friendly' },
-  { icon: Dumbbell, text: 'Expert Coaches' },
-  { icon: MapPin, text: 'Bengaluru Owned' },
-  { icon: Gift, text: 'Free Trial' }
-]
+// const FEATURES = [
+//   { icon: Heart, text: 'LGBTQ Friendly' },
+//   { icon: Dumbbell, text: 'Expert Coaches' },
+//   { icon: MapPin, text: 'Bengaluru Owned' },
+//   { icon: Gift, text: 'Free Trial' }
+// ]
 
 const PAYMENT_METHODS = [
   { icon: Banknote, label: 'Cash' },
@@ -54,7 +54,7 @@ function Footer() {
   const menuLinks = useMemo(() => MENU_LINKS, [])
   const helpLinks = useMemo(() => HELP_LINKS, [])
   const serviceLinks = useMemo(() => SERVICE_LINKS, [])
-  const features = useMemo(() => FEATURES, [])
+  // const features = useMemo(() => FEATURES, [])
   const paymentMethods = useMemo(() => PAYMENT_METHODS, [])
 
   return (
@@ -132,7 +132,7 @@ function Footer() {
         </div>
 
         {/* Features Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-10 border-t border-white/10 border-b mb-10">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-10 border-t border-white/10 border-b mb-10">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col md:flex-row items-center justify-center gap-3 text-gray-300 group cursor-default">
               <div className="p-3 rounded-full bg-white/5 group-hover:bg-green-500/10 group-hover:text-green-500 transition-colors">
@@ -141,7 +141,7 @@ function Footer() {
               <span className="text-sm font-medium">{feature.text}</span>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
