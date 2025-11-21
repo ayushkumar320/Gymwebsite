@@ -3,6 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "bfc-yellow": "#F4C430",
+        "bfc-yellow-hover": "#D4A017",
+        "bfc-black": "#000000",
+        "bfc-dark-gray": "#1A1A1A",
+      },
       animation: {
         scroll: "scroll 30s linear infinite",
         "scroll-reverse": "scroll-reverse 30s linear infinite",

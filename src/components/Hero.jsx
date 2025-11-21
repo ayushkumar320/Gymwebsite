@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import videoBg from "../assets/WhatsApp Video 2025-11-13 at 11.00.30.mp4";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Hero({allowReveal}) {
   const [isVideoReady, setIsVideoReady] = useState(false);
@@ -37,22 +38,34 @@ function Hero({allowReveal}) {
       </video>
 
       {/* Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
 
       {/* Content */}
       <div
-        className={`hero-content relative z-20 max-w-4xl mx-auto px-5 text-center mt-[102px] ${
+        className={`hero-content relative z-20 max-w-5xl mx-auto px-4 text-center mt-[102px] ${
           showContent ? "hero-content--visible" : ""
         }`}
       >
-        <h1 className="text-9xl md:text-6xl sm:text-5xl font-extrabold leading-tight mb-5 text-white">
-          BENGALURU FITNESS CONNECTION
+        <h2 className="text-bfc-yellow font-bold tracking-widest text-sm md:text-lg mb-4 uppercase">
+          Bengaluru Fitness Connection
+        </h2>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-none mb-6 text-white/90 uppercase tracking-tighter">
+          Unleash Your <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/90 to-gray-400">True Potential</span>
         </h1>
-        <p className="text-3xl md:text-2xl mb-8 text-white">START YOUR FITNESS JOURNEY WITH US</p>
+        <p className="text-lg sm:text-xl md:text-2xl mb-10 text-gray-300 max-w-2xl mx-auto font-medium">
+          Experience world-class training, premium equipment, and a supportive community that pushes you further.
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="relative bg-transparent text-white border-2 border-white py-4 px-10 text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:text-white hover:shadow-xl rounded-lg overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-green-500 before:transition-all before:duration-300 before:z-0 hover:before:w-full z-10">
-            <span className="relative z-20">CONNECT WITH US</span>
-          </button>
+          <a 
+            href="https://wa.me/919876543210"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative bg-bfc-yellow text-black border-2 border-bfc-yellow py-4 px-10 text-base font-black cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-black hover:text-white hover:border-bfc-yellow hover:shadow-[0_0_20px_rgba(244,196,48,0.5)] rounded-full overflow-hidden z-10 flex items-center gap-2"
+          >
+            <FaWhatsapp className="text-xl" />
+            <span className="relative z-20">Start Your Journey</span>
+          </a>
         </div>
       </div>
     </section>

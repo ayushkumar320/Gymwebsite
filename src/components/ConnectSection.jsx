@@ -5,6 +5,7 @@ import img3 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56 (1).jpeg
 import img4 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.56 (2).jpeg'
 import img5 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (1).jpeg'
 import img6 from '../assets/photo/WhatsApp Image 2025-11-13 at 10.59.57 (2).jpeg'
+import { FaWhatsapp } from 'react-icons/fa'
 
 const images = [
   { src: img1, alt: 'The Ivory Reformer' },
@@ -34,10 +35,20 @@ function ConnectSection() {
       <section className="w-full bg-white py-8 md:py-12">
         {/* Header */}
         <div className="w-full px-5 text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-wide">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-wide mb-6">
             <span className="text-gray-900">CONNECT WITH US</span>{' '}
             <span className="text-gray-600">@BFC</span>
           </h2>
+          
+          <a 
+            href="https://wa.me/919876543210"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+          >
+            <FaWhatsapp className="text-xl" />
+            Chat on WhatsApp
+          </a>
         </div>
 
         {/* Image Gallery Grid - 1 row x 6 columns */}
